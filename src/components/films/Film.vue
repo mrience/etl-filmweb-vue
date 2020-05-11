@@ -12,10 +12,10 @@
           <b-card-text>
             <h1>{{film.title}}</h1>
           </b-card-text>
-          <b-button v-b-modal.modal-xl variant="primary">
-           how details
+          <b-button variant="primary" @click="$bvModal.show(film.url)">
+           show details
           </b-button>
-          <film-details-modal :film="selectedFilm"></film-details-modal>
+          <film-details-modal :film="film" :key="film.url"></film-details-modal>
         </b-card>
     </div>
 </template>
@@ -24,15 +24,10 @@
   import FilmDetailsModal from './FilmDetailsModal';
 
     export default {
-      name: "Film",
+      name: "film",
       props: ['film'],
       components: {
         filmDetailsModal: FilmDetailsModal
-      },
-      data() {
-        return {
-          selectedFilm: null
-        }
       }
     }
 </script>

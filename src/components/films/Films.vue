@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="display-3">your films</h1>
-      <app-film v-for="(film, index) in films" :film="film" :key="index"></app-film>
+      <app-film v-for="film in films" :film="film" :key="film.url"></app-film>
   </div>
 </template>
 

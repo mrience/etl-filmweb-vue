@@ -1,13 +1,16 @@
 <template>
-<!--  <b-modal-->
-<!--    id="modal-xl"-->
-<!--    size="xl"-->
-<!--    title=film.title-->
-<!--  >-->
-<!--    <p v-for="(value, name) in film" :key="name">-->
-<!--      {{name}} | {{value}}-->
-<!--    </p>-->
-<!--  </b-modal>-->
+  <b-modal
+
+    :id="film.url"
+    size="xl"
+    :title="film.title"
+    ok-only
+    no-stacking
+  >
+    <p v-for="(value, name) in film" :key="name">
+      {{name}} | {{value}}
+    </p>
+  </b-modal>
 </template>
 
 <script>
